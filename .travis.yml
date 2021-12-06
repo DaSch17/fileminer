@@ -5,7 +5,11 @@ python:
 
 install:
   -pip install -e
+  -pip install pytest-cov codecov
 
 script:
   -pytest tests
-  
+  -pytest --cov=srctests
+
+after_success: 
+  -codecov
