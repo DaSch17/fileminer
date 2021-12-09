@@ -1,7 +1,7 @@
 fileminer
 =========
 
-![Build Status](https://github.com/DanSchl/fileminer/workflows/pythonapp/badge.svg)
+![Build Status](https://github.com/DanSchl/fileminer/workflows/pytest-flake8/badge.svg)
 
 
 Python Boilerplate contains all the boilerplate you need to create a Python package.
