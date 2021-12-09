@@ -2,7 +2,7 @@
 fileminer
 =========
 
-![Build Status](https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg)
+![Build Status](https://github.com/DanSchl/fileminer/workflows/pythonapp/badge.svg)
 
 
 Python Boilerplate contains all the boilerplate you need to create a Python package.
@@ -19,8 +19,3 @@ Features
 
 Credits
 -------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
