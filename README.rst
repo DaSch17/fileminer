@@ -12,6 +12,9 @@ fileminer
 .. image:: https://readthedocs.org/projects/fileminer/badge/?version=latest
         :target: https://fileminer.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
+ 
+.. image:: https://github.com/DanSchl/fileminer/workflows/pythonapp/badge.svg
+        :target:
 
 
 
