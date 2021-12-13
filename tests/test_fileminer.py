@@ -4,19 +4,10 @@ from fileminer.fileminer import rename, copy, dig_rename, dig_copy
 from os import listdir
 from os.path import isfile, join
 
-
-# def test_something_else(self, tmp_path):
-#    # create a file "myfile" in "mydir" in temp directory
-#    f1 = tmp_path / "mydir/myfile"
-#    f1.parent.mkdir()  # create a directory "mydir" in temp folder (which is the parent directory of "myfile"
-#    f1.touch()  # create a file "myfile" in "mydir"
-#    # write to file as normal
-#    f1.write_text("text to myfile")
-#    assert f1.read() == "text to myfile"
-
-
+"""
 class TestRename(object):
 
+    
     def test_one_file_with_good_type_is_renamed_and_one_other_file_is_not(self, tmp_path):
         # Create temp directory
         d1 = tmp_path / "mydir"
@@ -40,7 +31,7 @@ class TestRename(object):
         assert filename1 != newname1
         # Assert that f2's name is still the same
         assert filename2 == newname2
-
+"""
 
 class TestCopy(object):
 
@@ -68,7 +59,7 @@ class TestCopy(object):
         # assert number of files in "dst" is equal to 2
         assert nb_files_dst2 == 2
 
-
+"""
 class TestDigRename(object):
 
     def test_two_nested_directories_with_a_file_to_rename_and_a_file_to_keep(self, tmp_path):
@@ -108,7 +99,8 @@ class TestDigRename(object):
         # Assert that f2 and f4's names are still the same
         assert filename2 == newname2
         assert filename4 == newname4
-
+        
+ """
 
 class TestDigCopy(object):
 
