@@ -95,8 +95,8 @@ class TestDigRename(object):
         # Get the .txt file's new name
         listfilesd1 = [f for f in listdir(d1) if isfile(join(d1, f))]
         listfilesd2 = [f for f in listdir(d2) if isfile(join(d2, f))]
-        newname1 = listfilesd1[0]
-        newname2 = listfilesd1[1]
+        newname1 = listfilesd1[1]
+        newname2 = listfilesd1[0]
         newname3 = listfilesd2[1]
         newname4 = listfilesd2[0]
         # Assert that there is still two files in each directory
