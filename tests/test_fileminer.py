@@ -32,8 +32,8 @@ class TestRename(object):
         rename(d1, 'txt')
         # Get the .txt file's new name
         listfiles = [f for f in listdir(d1) if isfile(join(d1, f))]
-        newname1 = listfiles[0]
-        newname2 = listfiles[1]
+        newname1 = listfiles[1]
+        newname2 = listfiles[0]
         # Assert that there is still two files
         assert len(list(d1.iterdir())) == 2
         # Assert that the new name of f1 is different than before
