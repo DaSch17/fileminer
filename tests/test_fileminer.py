@@ -100,7 +100,7 @@ class TestDigRename(object):
         assert filename2 == newname2
         assert filename4 == newname4
         
- """
+
 
 class TestDigCopy(object):
 
@@ -137,3 +137,4 @@ class TestDigCopy(object):
         # Assert that the new files in d3 are the same .txt as d1 and d2
         assert filename1 == listfilesd3[0]
         assert filename3 == listfilesd3[1]
+ """
