@@ -4,7 +4,6 @@ from fileminer.fileminer import rename, copy, dig_rename, dig_copy
 from os import listdir
 from os.path import isfile, join
 
-"""
 class TestRename(object):
 
     
@@ -23,15 +22,16 @@ class TestRename(object):
         rename(d1, 'txt')
         # Get the .txt file's new name
         listfiles = [f for f in listdir(d1) if isfile(join(d1, f))]
-        newname1 = listfiles[1]
-        newname2 = listfiles[0]
+        listfiles.sort()
+        newname1 = listfiles[0]
+        newname2 = listfiles[1]
         # Assert that there is still two files
         assert len(list(d1.iterdir())) == 2
         # Assert that the new name of f1 is different than before
         assert filename1 != newname1
         # Assert that f2's name is still the same
         assert filename2 == newname2
-"""
+
 
 class TestCopy(object):
 
@@ -59,7 +59,7 @@ class TestCopy(object):
         # assert number of files in "dst" is equal to 2
         assert nb_files_dst2 == 2
 
-"""
+
 class TestDigRename(object):
 
     def test_two_nested_directories_with_a_file_to_rename_and_a_file_to_keep(self, tmp_path):
@@ -86,10 +86,12 @@ class TestDigRename(object):
         # Get the .txt file's new name
         listfilesd1 = [f for f in listdir(d1) if isfile(join(d1, f))]
         listfilesd2 = [f for f in listdir(d2) if isfile(join(d2, f))]
-        newname1 = listfilesd1[1]
-        newname2 = listfilesd1[0]
-        newname3 = listfilesd2[1]
-        newname4 = listfilesd2[0]
+        listfilesd1.sort()
+        listfilesd2.sort()
+        newname1 = listfilesd1[0]
+        newname2 = listfilesd1[1]
+        newname3 = listfilesd2[0]
+        newname4 = listfilesd2[1]
         # Assert that there is still two files in each directory
         assert len(list(d1.iterdir())) == 3
         assert len(list(d2.iterdir())) == 2
@@ -130,6 +132,7 @@ class TestDigCopy(object):
         dig_copy(d1, d3, 'txt')
         # Get the new content of d3
         listfilesd3 = [f for f in listdir(d3) if isfile(join(d3, f))]
+        listfilesd3.sort()
         print(listfilesd3)
         #Assert d3 changed with dig_copy with 2 new files
         assert len(listfilesd3) == 2
@@ -137,4 +140,4 @@ class TestDigCopy(object):
         # Assert that the new files in d3 are the same .txt as d1 and d2
         assert filename1 == listfilesd3[0]
         assert filename3 == listfilesd3[1]
- """
+
