@@ -38,10 +38,8 @@ jobs:
       with:
         #token: ${{ secrets.CODECOV_TOKEN }} #not used for public repos
         directory: ./coverage/reports/
-        fail_ci_if_error: true
+        #fail_ci_if_error: true
         files: ./coverage1.xml,./coverage2.xml
         flags: unittests
         verbose: true
-    - name: Uploader
-      run:  |
-        curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
+
