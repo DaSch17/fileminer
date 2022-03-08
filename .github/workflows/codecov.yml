@@ -33,6 +33,4 @@ jobs:
         pip install pytest
         pip install coverage
         coverage run -m pytest 
-        coverage report -m
-        coverage html
-        open htmlcov/index.html
+        python coverage report -m > coverage.txt
