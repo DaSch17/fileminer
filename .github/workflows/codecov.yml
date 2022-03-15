@@ -42,14 +42,5 @@ jobs:
       #  echo ${lastln:(-4)}
       # coverage run -m pytest > coverage.txt
 
-    - name: Create Awesome Badge
-      uses: schneegans/dynamic-badges-action@v1.1.0
-      with:
-        auth: ${{ secrets.GIST_SECRET }}
-        gistID: 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
-        filename: test.json
-        label: coverage
-        message: echo ${lastln:(-4)}
-        color: green
-        
+
         
