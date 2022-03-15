@@ -32,12 +32,14 @@ jobs:
       run: |
         pip install pytest
         pip install coverage
+        pip install coverage-badge
         coverage run -m pytest 
         coverage report -m 
         coverage report -m > coverage.txt
-        lastln=$(tail -n1 coverage.txt)
-        echo ${lastln}
-        echo ${lastln:(-4)}
+        coverage-badge -o coverage.svg
+      #  lastln=$(tail -n1 coverage.txt)
+      #  echo ${lastln}
+      #  echo ${lastln:(-4)}
       # coverage run -m pytest > coverage.txt
 
     - name: Create Awesome Badge
