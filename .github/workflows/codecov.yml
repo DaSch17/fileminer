@@ -34,7 +34,9 @@ jobs:
         pip install coverage
         coverage run -m pytest 
         coverage report -m > coverage.txt
-        coverage.txt 
+        lastln=$(tail -n1 coverage.txt)
+        echo ${lastln}
+        echo ${lastln:(-3)}
       # coverage run -m pytest > coverage.txt
 
 #    - name: Create Awesome Badge
