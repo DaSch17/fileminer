@@ -33,20 +33,21 @@ jobs:
         pip install pytest
         pip install coverage
         coverage run -m pytest 
+        coverage report -m 
         coverage report -m > coverage.txt
         lastln=$(tail -n1 coverage.txt)
         echo ${lastln}
-        echo ${lastln:(-3)}
+        echo ${lastln:(-4)}
       # coverage run -m pytest > coverage.txt
 
-#    - name: Create Awesome Badge
-#      uses: schneegans/dynamic-badges-action@v1.1.0
-#      with:
-#        auth: ${{ secrets.gist_secret }}
-#        gistID: 178eb4c2225375b32fb40a8eacbd9663
-#        filename: test.json
-#        label: coverage
-#        message: value%
-#        color: green
+    - name: Create Awesome Badge
+      uses: schneegans/dynamic-badges-action@v1.1.0
+      with:
+        auth: ${{ secrets.gist_secret }}
+        gistID: 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
+        filename: test.json
+        label: coverage
+        message: echo ${lastln:(-4)}
+        color: green
         
         
