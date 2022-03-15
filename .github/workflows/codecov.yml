@@ -32,15 +32,16 @@ jobs:
       run: |
         pip install pytest
         pip install coverage
-        coverage run -m pytest 
-    - name: Create Awesome Badge
-      uses: schneegans/dynamic-badges-action@v1.1.0
-      with:
-        auth: ${{ secrets.gist_secret }}
-        gistID: 178eb4c2225375b32fb40a8eacbd9663
-        filename: test.json
-        label: coverage
-        message: value%
-        color: green
+        coverage run -m pytest
+
+#    - name: Create Awesome Badge
+#      uses: schneegans/dynamic-badges-action@v1.1.0
+#      with:
+#        auth: ${{ secrets.gist_secret }}
+#        gistID: 178eb4c2225375b32fb40a8eacbd9663
+#        filename: test.json
+#        label: coverage
+#        message: value%
+#        color: green
         
         
