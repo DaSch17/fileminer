@@ -37,7 +37,7 @@ jobs:
         coverage report -m 
         coverage report -m > coverage.txt
         coverage-badge -o coverage.svg
-        git commit -m 'added badge' /home/runner/work/fileminer/fileminer/coverage.svg
+        git commit -m 'added badge' coverage.svg
         git push
       #  lastln=$(tail -n1 coverage.txt)
       #  echo ${lastln}
