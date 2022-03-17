@@ -37,8 +37,10 @@ jobs:
         coverage report -m 
         coverage report -m > coverage.txt
         coverage-badge -o coverage.svg
-        git commit -m 'added badge' coverage.svg
-        git push
+        coverage report
+        coverage xml
+        coverage html
+
       #  lastln=$(tail -n1 coverage.txt)
       #  echo ${lastln}
       #  echo ${lastln:(-4)}
