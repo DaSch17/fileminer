@@ -33,13 +33,12 @@ jobs:
         pip install pytest
         pip install coverage
         pip install coverage-badge
+        pip install genbadge
         coverage run -m pytest 
         coverage report -m 
         coverage report -m > coverage.txt
         coverage-badge -o coverage.svg
-        coverage report
-        coverage xml
-        coverage html
+        genbadge coverage
 
       #  lastln=$(tail -n1 coverage.txt)
       #  echo ${lastln}
