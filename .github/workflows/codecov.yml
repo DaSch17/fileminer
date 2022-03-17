@@ -33,7 +33,7 @@ jobs:
         pip install pytest
         pip install coverage
         pip install coverage-badge
-        pip install genbadge
+        pip install genbadge[all]
         coverage run -m pytest 
         coverage report -m 
         coverage report -m > coverage.txt
