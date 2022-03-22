@@ -37,7 +37,7 @@ jobs:
         coverage run -m pytest 
         coverage report 
         coverage xml -o ./reports/coverage/coverage.xml
-        coverage html -o ./reports/coverage/index.html
+        coverage html -d ./reports/coverage/index.html
         genbadge coverage 
     - name: archive code coverage html report
       uses: actions/upload-artifact@v2
