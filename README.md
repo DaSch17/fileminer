@@ -2,7 +2,7 @@ fileminer
 =========
 
 ![Build Status](https://github.com/DanSchl/fileminer/workflows/pytesting/badge.svg)
-[![Coverage Status](./reports/coverage/coverage-badge.svg?dummy=8484744)](./reports/coverage/index.html)
+[![Coverage Status](/home/runner/work/fileminer/fileminer/coverage-badge.svg)](./reports/coverage/index.html)
 [![Build Status](https://app.travis-ci.com/DanSchl/fileminer.svg?branch=main)](https://app.travis-ci.com/DanSchl/fileminer)
 
 Python Boilerplate contains all the boilerplate you need to create a Python package.
