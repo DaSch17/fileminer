@@ -36,9 +36,9 @@ jobs:
         pip install genbadge[all]
         coverage run -m pytest 
         coverage report 
-        coverage xml
+        coverage xml -o ./reports/coverage/coverage.xml
         coverage html
-        genbadge coverage -i coverage.xml
+        genbadge coverage 
     - name: archive code coverage html report
       uses: actions/upload-artifact@v2
       with:
