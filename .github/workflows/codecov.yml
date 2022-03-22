@@ -36,9 +36,15 @@ jobs:
         pip install genbadge[all]
         coverage run -m pytest 
         coverage report -m 
-        coverage report -m > coverage.txt
-        coverage-badge -o coverage.svg
-        genbadge coverage
+        coverage html
+    - name: archive code coverage html report
+      uses: actions/upload-artifact@v2
+      with:
+        name: code-coverage-report
+        path: htmlcov
+      #  coverage report -m > coverage.txt
+      #  coverage-badge -o coverage.svg
+      #  genbadge coverage
 
       #  lastln=$(tail -n1 coverage.txt)
       #  echo ${lastln}
