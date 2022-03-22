@@ -38,6 +38,7 @@ jobs:
         coverage report -m 
         coverage.xml
         coverage html
+        genbadge coverage
     - name: archive code coverage html report
       uses: actions/upload-artifact@v2
       with:
