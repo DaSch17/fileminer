@@ -34,7 +34,7 @@ jobs:
         pip install coverage
         pip install coverage-badge
         pip install genbadge[all]
-        coverage run pytest 
+        coverage run -m pytest 
         coverage report 
         coverage xml
         coverage html
