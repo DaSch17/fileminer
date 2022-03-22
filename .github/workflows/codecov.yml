@@ -41,7 +41,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: code-coverage-report
-        path: reports/coverage/htmlcov
+        path: htmlcov
       #  coverage report -m > coverage.txt
       #  coverage-badge -o coverage.svg
       #  genbadge coverage
